@@ -18,15 +18,42 @@ theme:
     - content.action.edit # Edit page in github
     - content.action.view # View page in github
     - content.code.copy # Copy code blocks
+    - content.tooltips  # Better tooltip than browser default
+    - header.autohide
   icon:
     repo: fontawesome/brands/github
     edit: material/file-document-edit-outline
     view: material/file-eye-outline
+    logo: material/access-point-check
+
+  palette:
+     # Palette toggle for automatic mode
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: ''
+
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
 
 extra:
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/bryokim
+
+extra_css:
+  - stylesheets/extra.css
 
 markdown_extensions:
   # Mermaid Diagrams
@@ -52,8 +79,10 @@ markdown_extensions:
   - pymdownx.mark
   - pymdownx.tilde
 
+  - abbr
+  - attr_list
+
 plugins:
-  - git-authors
   - git-revision-date-localized:
       enable_creation_date: true
       type: timeago
