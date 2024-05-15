@@ -10,7 +10,12 @@ docs_dir: docs/
 edit_uri: edit/main/docs/
 
 nav:
-  - Home: index.md
+  - Home:
+    - index.md
+
+  - MVP:
+    - mvp/template.md
+    - mvp/technical-details.md
 
 theme:
   name: material
@@ -19,7 +24,14 @@ theme:
     - content.action.view # View page in github
     - content.code.copy # Copy code blocks
     - content.tooltips  # Better tooltip than browser default
-    - header.autohide
+    # - header.autohide
+    - navigation.instant  # Makes site act like SPA
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.top  # Back to top button
+    # - navigation.tabs.sticky
+    - navigation.sections
+
   icon:
     repo: fontawesome/brands/github
     edit: material/file-document-edit-outline
