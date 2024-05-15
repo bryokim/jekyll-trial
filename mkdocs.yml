@@ -1,9 +1,11 @@
 site_name: Test Site
 site_description: Testing site
 site_author: Brian Kim
+site_url: https://bryokim.github.io
 
 repo_url: https://github.com/bryokim/jekyll-trial
 repo_name: bryokim/jekyll-trial
+docs_dir: docs/
 
 edit_uri: edit/main/docs/
 
