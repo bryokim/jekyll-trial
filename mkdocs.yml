@@ -1,0 +1,58 @@
+site_name: Test Site
+site_description: Testing site
+site_author: Brian Kim
+
+repo_url: https://github.com/bryokim/jekyll-trial
+repo_name: bryokim/jekyll-trial
+
+edit_uri: edit/main/docs/
+
+nav:
+  - Home: index.md
+
+theme:
+  name: material
+  features:
+    - content.action.edit # Edit page in github
+    - content.action.view # View page in github
+    - content.code.copy # Copy code blocks
+  icon:
+    repo: fontawesome/brands/github
+    edit: material/file-document-edit-outline
+    view: material/file-eye-outline
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/bryokim
+
+markdown_extensions:
+  # Mermaid Diagrams
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format:
+            !!python/name:pymdownx.superfences.fence_code_format # Code blocks
+
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+
+  # Formatting
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.tilde
+
+plugins:
+  - git-authors
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
+      fallback_to_build_date: true
