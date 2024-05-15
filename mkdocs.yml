@@ -9,6 +9,8 @@ docs_dir: docs/
 
 edit_uri: edit/main/docs/
 
+copyright: Copyright &copy; 2024 Brian Kim
+
 nav:
   - Home:
     - index.md
@@ -31,6 +33,10 @@ theme:
     - navigation.top  # Back to top button
     # - navigation.tabs.sticky
     - navigation.sections
+
+    - search.suggest
+    - search.highlight
+    - search.share
 
   icon:
     repo: fontawesome/brands/github
@@ -76,6 +82,7 @@ markdown_extensions:
           format:
             !!python/name:pymdownx.superfences.fence_code_format # Code blocks
 
+  # Code blocks
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
@@ -90,9 +97,18 @@ markdown_extensions:
   - pymdownx.keys
   - pymdownx.mark
   - pymdownx.tilde
+  - pymdownx.emoji
+
+  - admonition
+  - pymdownx.details
 
   - abbr
   - attr_list
+  - tables
+
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
 plugins:
   - git-revision-date-localized:
@@ -102,3 +118,5 @@ plugins:
   - git-committers:
       repository: bryokim/jekyll-trial
       branch: main
+
+  - search

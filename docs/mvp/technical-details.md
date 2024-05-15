@@ -19,3 +19,7 @@ _Full flow of the program from client/browser to server and database_
 ## Mockups
 
 _implementation of the wireframes in a tool like figma_
+
+??? note "Note"
+
+    This is a note
