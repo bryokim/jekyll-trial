@@ -1,7 +1,7 @@
 site_name: Test Site
 site_description: Testing site
 site_author: Brian Kim
-site_url: https://bryokim.github.io
+site_url: https://bryokim.github.io/jekyll-trial
 
 repo_url: https://github.com/bryokim/jekyll-trial
 repo_name: bryokim/jekyll-trial
@@ -58,3 +58,6 @@ plugins:
       enable_creation_date: true
       type: timeago
       fallback_to_build_date: true
+  - git-committers:
+      repository: bryokim/jekyll-trial
+      branch: main
